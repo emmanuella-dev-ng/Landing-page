@@ -1,0 +1,342 @@
+/* ==========GENERAL STYLE ========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080b1a;
+    color: #f5f7ff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: #080b18;
+    border-bottom: 0.65rem solid #202640;
+}
+
+.narbar {
+    max-width: 90rem;
+    margin: auto;
+    padding: 1rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo,
+footer h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-left: 3rem;
+}
+
+.logo span,
+footer span {
+    color: #7c6cff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    color: #9da5c3;
+    font-size: 0.85rem;
+    justify-content: end;
+    align-items: center;
+    margin-right: 6rem;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.nav-btn,
+.hero-btn {
+    background: linear-gradient(135deg, #6c5ce7, #21d4fd);
+    padding: 0.7rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 25rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 1.5rem;
+    background: #03081f;
+}
+
+.hero-content {
+    max-width: 45rem;
+}
+
+.tag,
+.section-tag {
+    color: #6fcbff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.05;
+    margin-bottom: 1.2rem;
+}
+
+.hero-text {
+    color: #9da5c3;
+    max-width: 34rem;
+    margin: 0 auto 2rem;
+    font-size: 0.95rem;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 0.85rem 1.6rem;
+}
+
+.features,
+.products,
+.reviews {
+    padding: 5rem 5rem;
+    text-align: center;
+}
+
+.features {
+    background: #10162b;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+}
+
+.feature-grid,
+.product-grid,
+.review-grid {
+    max-width: 65rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.feature-grid article,
+.product,
+.review-grid article {
+    background-color: #171f38;
+    border: 0.065rem solid #252e4b;
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.feature-grid span {
+    color: #6c9cff;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.feature-grid p,
+.product p,
+.review-grid p {
+    color: #919ab7;
+    font-size: 0.8rem;
+}
+
+.products {
+    background: #080b1a;
+}
+
+.product {
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-0.4rem);
+    border-color: #6c5ce7;
+}
+
+.product-icon {
+    height: 8rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.7rem;
+    font-size: 3rem;
+    background: linear-gradient(135deg, #202a50, #211b49);
+}
+
+.product strong {
+    display: block;
+    margin: 1rem;
+    color: #72d9ff;
+}
+
+.reviews {
+    background: #10162b;
+}
+
+.review-grid article {
+    text-align: left;
+}
+
+.review-grid b {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+.review-grid small {
+    color: #69728e;
+}
+
+footer {
+    max-width: 90rem;
+    margin: auto;
+    padding: 3rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+footer p {
+    color: #737c98;
+    font-size: 0.75rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 4rem;
+}
+
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-links b {
+    color: #737c98;
+    font-size: 0.65rem;
+}
+
+.footer-links a {
+    color: #9da5c3;
+    font-size: 0.75rem;
+}
+
+.copyright {
+    border-top: 0.65rem solid #1c2238;
+    padding: 1rem;
+    text-align: center;
+    color: #606982;
+    font-size: 0.7rem;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* TABLETS */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1rem 2.5rem;
+    }
+
+    .features,
+    .products,
+    .reviews {
+        padding: 4rem 2.5rem;
+    }
+
+    .feature-grid,
+    .product-grid,
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid article:last-child,
+    .product:last-child,
+    .review-grid article:last-child {
+        grid-column: 1/ -1;
+    }
+
+    footer {
+        padding: 3rem 2.5rem;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .narbar {
+        padding: 1rem 1.2rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-btn {
+        padding: 0.6rem 1rem;
+    }
+
+    .hero {
+        padding: 4rem 1.2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .features,
+    .products,
+    .reviews {
+        padding: 3.5rem 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .feature-grid,
+    .product-grid,
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid article:last-child,
+    .product:last-child,
+    .review-grid article:last-child {
+        grid-column: auto;
+    }
+
+    footer {
+        padding: 2.5rem 1.2rem;
+        flex-direction: column;
+    }
+
+    .footer-links {
+        gap: 2rem;
+        justify-content: space-between;
+    }
+}
